@@ -1,4 +1,4 @@
-import csv
+import csv, sys
 
 class Datos:
 
@@ -14,15 +14,21 @@ class Datos:
             with open(self.archivo, 'r') as data:
                 for line in csv.DictReader(data):
                     if (len(line) != 6):
-                        raise IndexError("Tickets incompletos")
+                        print("Tickets incompletos")
+                        sys.exit(1)
                     else:
                         self.tickets.append(line)
-
-            if (len(self.tickets) == 3000-1):
-                raise IndexError("Cantidad de Tickets incorrecta")
-            if (len(self.tickets[0]) != 6):
-                raise IndexError("Tickets incompletos")
         except FileNotFoundError as e:
             print ("No existe el archivo")
+            sys.exit(1)
         except IOError as e:
             print ("Error al leer el archivo")
+            sys.exit(1)
+
+        if (len(self.tickets) != 3000-1):
+            print("Cantidad de Tickets incorrecta")
+            sys.exit(1)
+        for n in self.tickets:
+            if (('' in n.values()) == True):
+                print("Tickets incompletos")
+                sys.exit(1)
