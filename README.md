@@ -15,7 +15,7 @@
 Para ejecutar el programa sólo debe escribir en la líne de comandos
 
 ```sh
-$ python3 tickets.py
+$ python3 src/main/MYP/tickets.py
 ```
 
 ### Ejemplo
