@@ -49,6 +49,6 @@ class Datos:
             print ("Error al leer el archivo")
             sys.exit(1)
 
-        if (len(self.tickets) != 3000-1):
+        if (len(self.tickets) != 3000):
             print("Cantidad de Tickets incorrecta")
             sys.exit(1)
