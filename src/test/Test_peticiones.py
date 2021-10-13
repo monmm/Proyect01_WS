@@ -1,7 +1,7 @@
 import unittest
 from sys import path
 path.append("../..")
-from src.peticiones import Solicita
+from src.main.MYP.peticiones import Solicita
 import requests
 
 class TestSolicita(unittest.TestCase):
