@@ -72,5 +72,3 @@ class Ticket:
         respuesta(num_ticket, or_answer, des_answer)
         num_ticket += 1 
     
-    # Código para verificar el número de peticiones realizadas a OpenWeather.
-    # print(len(peticiones))
