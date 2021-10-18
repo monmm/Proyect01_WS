@@ -4,15 +4,25 @@
 
 *Aplicación en la línea de comandos para mostrar el reporte del clima para 3 mil tickets de avión, escrita en Python.*
 
-## Getting Started
-
 ### Prerequisitos
 
 -  Python
+-  PyPI - tabulate
+
+Asegúrese de de tener `python3` y `pip` en su computadora
+
+```sh
+$ sudo apt-get install python3-pip
+```
+Luego, debe instalar la paquetería de tabulate
+
+```sh
+$ pip install tabulate
+```
 
 ### Ejecutar el Programa
 
-Para ejecutar el programa sólo debe escribir en la líne de comandos
+Para ejecutar el programa sólo debe escribir en la línea de comandos
 
 ```sh
 $ python3 src/main/MYP/tickets.py
