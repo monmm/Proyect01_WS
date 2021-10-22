@@ -11,17 +11,25 @@ class TestDatos(unittest.TestCase):
     
 
     def test_setData(self):
-        # Verificamos la salida con un archivo inexistente    
+        """Test para los datos recibidos (tickets).
+
+        Verificamos que se lance la excepción correspondiente 
+        con un archivo inexistente,    
+        cuando los campos de los tickets están incompletos y
+        cuando tenemos un número distinto a 3 mil tickets.
+
+        Excepciones a verificar:
+        SystemExit
+    
+        """         
         with self.assertRaises(SystemExit) as exception_info:
             Datos.setData(self.bdd_x)
         self.assertEqual ("Algo salió mal con el archivo", str(exception_info.exception))    
-        
-        # Verificamos la salida cuando los campos de los tickets están incompletos        
+                 
         with self.assertRaises(SystemExit) as exception_info:
             Datos.setData(self.bdd_in)
         self.assertEqual ('Tickets incompletos', str(exception_info.exception))
         
-        # Verificamos la salida cuando tenemos un número distinto a 3 mil tickets
         with self.assertRaises(SystemExit) as exception_info:
             Datos.setData(self.bdd_ch)
         assert str(exception_info.exception) == 'Cantidad de Tickets incorrecta'
