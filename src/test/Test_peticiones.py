@@ -19,8 +19,8 @@ class TestSolicita(unittest.TestCase):
         assert str(exception_info.exception) == 'Código de ciudad incorrecto'
 
     def test_coord_request(self):
-        self.assertEquals (self.lat,self.v['coord']['lat']) 
-        self.assertEquals (self.lon,self.v['coord']['lon']) 
+        self.assertEqual (self.lat,self.v['coord']['lat']) 
+        self.assertEqual (self.lon,self.v['coord']['lon']) 
         self.assertRaises(TypeError,Solicita.cityRequest,10)
 
     if __name__ == "__main__":

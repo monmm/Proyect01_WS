@@ -11,29 +11,12 @@ class TestDatos(unittest.TestCase):
     
 
     def test_setData(self):
-        #Verificamos la salida con un archivo inexistente
-        
-        with self.assertRaises(FileNotFoundError) as exception_info:
-            bdd_m = Datos('nofile.csv')
-            Datos.setData(bdd_m)
-        self.assertEqual ('No existe el archivo', str(exception_info.exception))
-        
-        
-        #with self.assertRaises(SystemExit) as exception_info:
-        #    self.bdd_x.setData()
-        #self.assertEqual ('No existe el archivo', str(exception_info.exception))
-        """
-        with self.assertRaises(FileNotFoundError) as exception_info:
-            Datos.setData(self.bdd_x)
-        self.assertEqual ('e', str(exception_info.exception))
-        
-        # Verificamos la salida cuando no teneos permisos de lectura
+        # Verificamos la salida con un archivo inexistente    
         with self.assertRaises(SystemExit) as exception_info:
             Datos.setData(self.bdd_x)
-        self.assertEqual ('No existe el archivo', str(exception_info.exception))
-        #self.assertEqual(exception_info.exception.code, 1)
-        # Verificamos la salida cuando los campos de los tickets están incompletos
+        self.assertEqual ("Algo salió mal con el archivo", str(exception_info.exception))    
         
+        # Verificamos la salida cuando los campos de los tickets están incompletos        
         with self.assertRaises(SystemExit) as exception_info:
             Datos.setData(self.bdd_in)
         self.assertEqual ('Tickets incompletos', str(exception_info.exception))
@@ -42,7 +25,7 @@ class TestDatos(unittest.TestCase):
         with self.assertRaises(SystemExit) as exception_info:
             Datos.setData(self.bdd_ch)
         assert str(exception_info.exception) == 'Cantidad de Tickets incorrecta'
-        """
+        
 
     if __name__ == "__main__":
         unittest.main()
