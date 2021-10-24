@@ -9,12 +9,13 @@
 -  Python
 -  PyPI - tabulate
 
-Asegúrese de de tener `python3` y `pip` en su computadora
+Asegúrese de de tener `python3` y `pip` en su computadora:
 
 ```sh
 $ sudo apt-get install python3-pip
 ```
-Luego, debe instalar la paquetería de tabulate
+
+Luego, debe instalar la paquetería de tabulate:
 
 ```sh
 $ pip install tabulate
@@ -22,7 +23,7 @@ $ pip install tabulate
 
 ### Ejecutar el Programa
 
-Para ejecutar el programa sólo debe escribir en la línea de comandos
+Para ejecutar el programa sólo debe escribir en la línea de comandos:
 
 ```sh
 $ python3 src/main/MYP/tickets.py
@@ -50,4 +51,12 @@ $ python3 tickets.py
             Sensacion:           21.55 Cº           32.24 Cº
               Humedad:               29 %               52 %
 ``` 
+
+### Pruebas unitarias
+
+Para ejecutar los test del programa sólo debe escribir en la línea de comandos:
+
+```
+$ python3 -m unittest discover src/test/ -p "*.py"
+```
 
