@@ -39,3 +39,4 @@ def respuesta(i, dic_o, dic_d):
 
 	print(tabulate(reporte, headers='firstrow', tablefmt='simple', stralign='right', floatfmt='.0f'))
 	print("\n")
+	

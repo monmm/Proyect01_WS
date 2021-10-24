@@ -38,17 +38,14 @@ class Datos:
             with open(self.archivo, 'r') as data:
                 for line in csv.DictReader(data):
                     if (('' in line.values()) == True):
-                        print("Tickets incompletos")
-                        sys.exit(1)
+                        sys.exit("Tickets incompletos")
                     else:
                         self.tickets.append(line)
         except FileNotFoundError as e:
-            print ("No existe el archivo")
-            sys.exit(1)
+            sys.exit("Algo salió mal con el archivo")
         except IOError as e:
-            print ("Error al leer el archivo")
-            sys.exit(1)
+            sys.exit("Algo salió mal con el archivo")
 
         if (len(self.tickets) != 3000):
-            print("Cantidad de Tickets incorrecta")
-            sys.exit(1)
+            sys.exit("Cantidad de Tickets incorrecta")
+            
