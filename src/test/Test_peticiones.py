@@ -38,8 +38,8 @@ class TestSolicita(unittest.TestCase):
         TypeError -- cuando el valor de la longitud o la latitud 
         no son una cadena    
         """
-        self.assertEquals (self.lat,self.v['coord']['lat']) 
-        self.assertEquals (self.lon,self.v['coord']['lon']) 
+        self.assertEqual (self.lat,self.v['coord']['lat']) 
+        self.assertEqual (self.lon,self.v['coord']['lon']) 
         self.assertRaises(TypeError,Solicita.cityRequest,10)
 
     if __name__ == "__main__":
