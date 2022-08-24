@@ -4,7 +4,7 @@ from imprime import respuesta
 
 class Ticket:
     
-    api_key = "2b0278a7ed481d119f4ffb3a34a6d97d" # api_key de @monica
+    api_key = "***" # api_key de @monica
     sol_key = Solicita(api_key) # inicializamos nuestra llave para OpenWeather
     bdd = Datos("src/data/dataset1.csv") # definimos nuestra base de datos
     Datos.setData(bdd) # obtenemos los datos de nuestra base de datos
